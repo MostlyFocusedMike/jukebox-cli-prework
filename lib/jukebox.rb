@@ -35,10 +35,11 @@ def play(songs)
       else 
         puts "Invalid input, please try again"
       end
+    # any other number than 0 means a real number was entered
     elsif selection.to_i <= songs.length
       puts "Playing #{songs[selection.to_i - 1]}"
-      #break
-    elsif selection == "exit"
+      #break 
+    #elsif selection == "exit"
       #break
     else
       puts "Invalid input, please try again"
