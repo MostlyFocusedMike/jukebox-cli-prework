@@ -30,15 +30,15 @@ def play(songs)
       if songs.map(&:downcase).include?(selection)
         selection = selection.split.map(&:capitalize).join(" ")
         puts "Playing #{selection}"
-        break
+        #break
       else 
         puts "Invalid input, please try again"
       end
     elsif selection.to_i <= songs.length
       puts "Playing #{songs[selection.to_i - 1]}"
-      break
+      #break
     elsif selection == "exit"
-      break
+      #break
     else
       puts "Invalid input, please try again"
     end
