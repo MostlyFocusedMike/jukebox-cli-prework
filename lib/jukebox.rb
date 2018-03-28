@@ -26,6 +26,7 @@ def play(songs)
   puts "Please enter a song name or number:"
   #loop do
     selection = gets.chomp.downcase
+    # words to_i are turned into 0
     if selection.to_i == 0 
       if songs.map(&:downcase).include?(selection)
         selection = selection.split.map(&:capitalize).join(" ")
