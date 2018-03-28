@@ -25,23 +25,23 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   #loop do
-    selection = gets.chomp.downcase
-    if selection.to_i == 0 
-      if songs.map(&:downcase).include?(selection)
-        selection = selection.split.map(&:capitalize).join(" ")
-        puts "Playing #{selection}"
-        break
-      else 
-        puts "Invalid input, please try again"
-      end
-    elsif selection.to_i <= songs.length
-      puts "Playing #{songs[selection.to_i - 1]}"
+  selection = gets.chomp.downcase
+  if selection.to_i == 0 
+    if songs.map(&:downcase).include?(selection)
+      selection = selection.split.map(&:capitalize).join(" ")
+      puts "Playing #{selection}"
       break
-    elsif selection == "exit"
-      break
-    else
+    else 
       puts "Invalid input, please try again"
     end
+  elsif selection.to_i <= songs.length
+    puts "Playing #{songs[selection.to_i - 1]}"
+    break
+  elsif selection == "exit"
+    break
+  else
+    puts "Invalid input, please try again"
+  end
   #end
 end
 
